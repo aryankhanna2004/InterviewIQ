@@ -7,7 +7,7 @@ function Header() {
       <h2 className="Brand-Name">Interview-IQ</h2>
       <div className="profile-section">
         <div className="profile-pic"></div>
-        <h3 className="Name">Sriharshini Gubbala</h3>
+        <h3 className="Name">John Doe</h3>
       </div>
     </div>
   );
