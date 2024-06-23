@@ -11,13 +11,13 @@
 
 .container::before {
   content: "";
-  position: fixed; 
+  position: fixed;
   left: 0;
-  top: 0; 
-  width: 50px; 
-  height: 100vh; 
-  background-color: #283618; 
-  z-index: 1; 
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  background-color: #283618;
+  z-index: 1;
 }
 
 .main-content {
@@ -35,6 +35,8 @@
   margin-right: 20px;
   margin-left: 30px;
   margin-top: 60px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
 }
 
 .right-panel {
@@ -43,6 +45,8 @@
   padding: 20px;
   margin-right: 10px;
   margin-top: 60px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
 }
 
 .top-message {
@@ -70,7 +74,7 @@
 }
 
 .red-button {
-  background-color: #ff0000;
+  background-color: #00FF00;
 }
 
 .message {
@@ -102,13 +106,15 @@
 
 .suggestions-container {
   background-color: #3a5a40;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   padding: 15px;
   color: white;
   margin-top: auto;
   margin-left: 50px;
   margin-right: 40px;
   margin-bottom: 40px;
+  overflow-y: auto;
+  max-height: calc(50vh - 80px);
 }
 
 .percentage {
