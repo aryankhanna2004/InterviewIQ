@@ -137,7 +137,8 @@ function Interviewer() {
               )}
             </ul>
           </div>
-          <div className="improvement">
+        </div>
+        <div className="improvement">
             <h3>Suggestions for Improvement</h3>
             <ul>
               {response.suggestions_for_improvement.length > 0 ? (
@@ -153,7 +154,6 @@ function Interviewer() {
             <h3>Stronger Response</h3>
             <p>{response.stronger_response || 'No stronger response provided'}</p>
           </div>
-        </div>
       </div>
     </div>
   );

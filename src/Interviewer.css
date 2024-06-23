@@ -185,14 +185,12 @@
   font-size: 22px;
 }
 
-.what-you-could-have-said {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 22px;
-  color: white;
+.improvement, .stronger-response {
+  margin-top: 10px;
+  text-align: left;
 }
 
-/* Remove or comment out styles for elements not in the image */
-.improvement, .stronger-response {
-  display: none;
+.improvement h3, .stronger-response h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
