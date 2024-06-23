@@ -91,24 +91,20 @@ function Interviewer() {
             />
           </div>
           <div className="controls">
-            <div className="control-button"></div>
-            <div className="control-button"></div>
-            <div className="control-button red-button" onClick={handleButtonClick}></div>
-            <div className="control-button"></div>
-            <div className="control-button"></div>
+            <div className="control-button red-button" onClick={handleButtonClick}>Send</div>
           </div>
         </div>
         <div className="right-panel">
           <h3>Current Emotions:</h3>
-          <ul>
-            {currentEmotions.length > 0 ? (
-              currentEmotions.map((emotion, index) => (
-                <li key={index}>{emotion}</li>
-              ))
-            ) : (
-              <li>No emotions detected</li>
-            )}
-          </ul>
+          {currentEmotions.length > 0 ? (
+            currentEmotions.map((emotion, index) => (
+              <div key={index} className="message">
+                {emotion}
+              </div>
+            ))
+          ) : (
+            <div className="message">No emotions detected</div>
+          )}
         </div>
       </div>
       <button className="new-button1">New</button>
@@ -141,7 +137,8 @@ function Interviewer() {
               )}
             </ul>
           </div>
-          <div className="improvement">
+        </div>
+        <div className="improvement">
             <h3>Suggestions for Improvement</h3>
             <ul>
               {response.suggestions_for_improvement.length > 0 ? (
@@ -157,7 +154,6 @@ function Interviewer() {
             <h3>Stronger Response</h3>
             <p>{response.stronger_response || 'No stronger response provided'}</p>
           </div>
-        </div>
       </div>
     </div>
   );

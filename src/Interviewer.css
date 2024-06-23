@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   width: calc(95% - 50px);
-  height: 100vh;
-  margin-left: 50px;
+  height: 200vh;
+  margin-left: 60px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -14,7 +14,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 50px;
+  width: 60px;
   height: 100vh;
   background-color: #283618;
   z-index: 1;
@@ -23,8 +23,9 @@
 .main-content {
   display: flex;
   flex: 1;
-  overflow-y: auto;
-  padding-bottom: 20px;
+  /* overflow-y: auto; */
+  max-height: calc(100vh - 150px);
+  padding-bottom: 0px;
 }
 
 .left-panel {
@@ -33,20 +34,43 @@
   padding: 20px;
   position: relative;
   margin-right: 20px;
-  margin-left: 30px;
+  margin-left: 60px;
   margin-top: 60px;
-  overflow-y: auto;
-  max-height: calc(100vh - 80px);
+  /* overflow-y: auto; */
+  max-height: calc(100vh - 300px);
+}
+
+.video-player {
+  margin-left: 80px;
 }
 
 .right-panel {
   flex: 1;
-  background-color: #f0f0f0;
+  background-color: #e0e0e0;
   padding: 20px;
   margin-right: 10px;
   margin-top: 60px;
   overflow-y: auto;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 300px);
+  border-radius: 10px;
+}
+
+.message {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.message::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #283618;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .top-message {
@@ -58,23 +82,24 @@
 }
 
 .controls {
-  position: absolute;
   bottom: 20px;
   left: 20px;
   display: flex;
   gap: 10px;
-  margin-left: 35%;
+  margin-left: 45%;
+  margin-top:10px;
 }
 
 .control-button {
-  width: 40px;
+  width: 100px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: #808080;
 }
 
 .red-button {
   background-color: #00FF00;
+  font-size: 24px;
 }
 
 .message {
@@ -86,7 +111,7 @@
 
 .new-button1 {
   position: absolute;
-  right: 300px;
+  right: 250px;
   background-color: #4a6741;
   color: white;
   padding: 8px 13px;
@@ -97,7 +122,7 @@
 .new-button2 {
   position: absolute;
   top: 10px;
-  right: 160px;
+  right: 130px;
   background-color: #4a6741;
   color: white;
   padding: 8px 13px;
@@ -107,54 +132,90 @@
 .suggestions-container {
   background-color: #3a5a40;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
   color: white;
-  margin-top: auto;
-  margin-left: 50px;
-  margin-right: 40px;
-  margin-bottom: 40px;
+  margin: 20px 60px 40px 100px;
   overflow-y: auto;
-  max-height: calc(50vh - 80px);
+  /* max-height: calc(200vh - 80px); */
+  position: relative;
 }
 
 .percentage {
+  position: absolute;
   top: 10px;
   left: 10px;
   background-color: white;
   color: black;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
+
 
 .suggestions-title {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  padding-bottom: 10px;
 }
 
 .suggestions-content {
   display: flex;
   background-color: #e9e9e9;
   color: black;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .strengths, .weakness {
   flex: 1;
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+  text-align: left;
 }
 
 .strengths {
   border-right: 1px solid #ccc;
 }
 
-.what-you-could-have-said {
-  text-align: center;
-  margin-bottom: 10px;
+.strengths h3, .weakness h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: black;
+}
+
+.improvement, .stronger-response {
+  margin-top: 10px;
+  text-align: left;
+   background-color: #e9e9e9;
+}
+.improvement h3, .stronger-response h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 10px 10px 10px 10px;
+  color: black;
+  margin-bottom: 0;
+}
+.strengths h3, .weakness h3 {
+  color: black;
+  padding: 10px 10px 10px 10px;
+  
+}
+
+.improvement p, .stronger-response p {
+  margin-top : 0;
+  margin-bottom: 0;
+  padding: 10px 10px 10px 10px;
+  color: black;
+}
+.improvement ul, .stronger-response ul {
+  margin-top: 0%;
+  padding: 10px 10px 10px 20px;
+  color: black;
+  
 }

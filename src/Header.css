@@ -8,15 +8,29 @@
   height: 60px; 
   padding: 0 20px; 
   box-sizing: border-box;
-  margin-left: 50px;
+  margin-left: 60px;
+}
+
+#logo {
+  height: 48px; 
+  width: 48px;
+  border-radius: 50%; 
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+#logo > img {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 50%; 
 }
 
 .Header::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -50px;
-  width: 50px; 
+  left: -60px;
+  width: 60px; 
   height: 100%; 
   background-color: #283618; 
 }
@@ -38,12 +52,20 @@ h2 {
 .profile-pic {
   width: 48px; 
   height: 48px;
-  background-color: blue; 
   border-radius: 50%; 
   margin-right: 10px;
+  justify-content: center;
 }
 
 .Name {
   color: white;
   margin: 0;
+  margin-right: 10px;
+}
+
+.profile-pic > img {
+  width: 80%; 
+  height: 80%; 
+  border-radius: 50%; 
+  margin-top: 5px;
 }
