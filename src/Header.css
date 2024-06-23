@@ -1,0 +1,49 @@
+.Header {
+  position: relative;
+  background-color: #D4D4D4; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 50px); 
+  height: 60px; 
+  padding: 0 20px; 
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+.Header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px; 
+  height: 100%; 
+  background-color: #283618; 
+}
+
+h2 {
+  color: white;
+  margin: 0;
+  white-space: nowrap; 
+  flex-grow: 1; 
+  text-align: left;
+  color: black;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 48px; 
+  height: 48px;
+  background-color: blue; 
+  border-radius: 50%; 
+  margin-right: 10px;
+}
+
+.Name {
+  color: white;
+  margin: 0;
+}
