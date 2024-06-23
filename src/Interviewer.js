@@ -19,15 +19,7 @@ function Interviewer() {
   const videoUrl = 'https://jbdehsbckejkbdkhwx.s3.amazonaws.com/IMG_4648.mp4'; // Replace with your actual S3 video URL
 
   useEffect(() => {
-    // Fetch the emotion data from the backend
     setMessage('Tell me about a time when you had to work with a difficult person. How did you handle the situation?');
-    axios.get('/api/emotions')
-      .then(res => {
-        setEmotions(res.data);
-      })
-      .catch(error => {
-        console.error('Error fetching emotions:', error);
-      });
   }, []);
 
   const handleButtonClick = async () => {
@@ -44,13 +36,15 @@ function Interviewer() {
     }
 
     try {
-      const res = await axios.post('/api/chat', { message }, {
+      const res = await axios.post('/api/interview', { message }, {
         headers: {
           'Content-Type': 'application/json'
         }
       });
 
-      setResponse(JSON.parse(res.data.response));
+      const { response: chatResponse, emotions: emotionData } = res.data;
+      setResponse(JSON.parse(chatResponse));
+      setEmotions(emotionData);
     } catch (error) {
       console.error('Error fetching response:', error);
       if (error.response) {
