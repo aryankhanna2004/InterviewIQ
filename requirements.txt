@@ -1,0 +1,8 @@
+hume
+requests
+flask
+flask_socketio
+flask_cors
+langchain
+langchain-core
+langchain_groq
